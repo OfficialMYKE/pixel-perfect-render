@@ -6,9 +6,14 @@ import VintageNavbar from "@/components/ui/vintage-navbar";
 import Footer from "@/components/ui/footer";
 import ProductCard from "@/components/ui/product-card";
 import { useLanguage } from "@/lib/i18n";
-import { getFeatured, products } from "@/lib/products";
+import { getFeatured } from "@/lib/products";
 import HelixRibbonHero from "@/components/ui/helix-ribbon-hero";
-import photoBomber from "@/assets/products/leather-bomber.jpg";
+import modelBomber from "@/assets/models/model-bomber.jpg";
+import modelVarsity from "@/assets/models/model-varsity.jpg";
+import modelWorkwear from "@/assets/models/model-workwear.jpg";
+import modelGraphicTee from "@/assets/models/model-graphic-tee.jpg";
+import modelHoodie from "@/assets/models/model-hoodie.jpg";
+import modelWindbreaker from "@/assets/models/model-windbreaker.jpg";
 import streetwearOne from "@/assets/vintage-streetwear-01.jpg";
 import streetwearTwo from "@/assets/vintage-streetwear-02.jpg";
 import streetwearThree from "@/assets/vintage-streetwear-03.jpg";
@@ -33,7 +38,16 @@ const LOOKBOOK = [
   { src: streetwearFour, alt: "Archive graphic tees, workwear and faded denim" },
 ];
 
-const HELIX_PROJECTS = products.slice(-12).reverse().map((p) => ({ src: p.images[0] ?? "", title: p.name.en }));
+const HERO_MODELS = [
+  { src: modelVarsity, title: "Varsity — Subway" },
+  { src: modelWorkwear, title: "Workwear — Brooklyn" },
+  { src: modelGraphicTee, title: "Graphic tee — Taxi" },
+  { src: modelHoodie, title: "College hoodie — SoHo" },
+  { src: modelWindbreaker, title: "Windbreaker — Manhattan" },
+  { src: modelBomber, title: "Leather bomber — Dusk" },
+];
+// Repeat the editorial model shots to fill the helix ribbon.
+const HELIX_PROJECTS = [...HERO_MODELS, ...HERO_MODELS];
 
 const CATEGORY_TILES = [
   { key: "hombre", img: archiveJacket },
@@ -240,10 +254,10 @@ export default function MetroHero({ videoSrc = DEFAULT_VIDEO, className }: Metro
         showNav={false}
         height="calc(100svh - var(--site-header-h, 0px))"
         {...(className ? { className } : {})}
-        greeting={es ? "Vintage real" : "True vintage"}
-        name="New York"
-        portrait={photoBomber}
-        portraitAlt={es ? "Chaqueta bomber de cuero vintage" : "Vintage leather bomber jacket"}
+        greeting="Authentic"
+        name="Vintage Store"
+        portrait={modelBomber}
+        portraitAlt={es ? "Modelo con chaqueta bomber de cuero vintage en Nueva York" : "Model in a vintage leather bomber jacket in New York"}
         projects={HELIX_PROJECTS}
         links={[
           { label: es ? "Tienda" : "Shop", href: "/shop" },
