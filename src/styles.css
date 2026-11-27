@@ -540,6 +540,12 @@ body {
   .announcement-bar__item { gap: 2px; }
 }
 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
 /* ── Navbar ─────────────────────────────────────────── */
 
 .vn {
@@ -567,11 +573,11 @@ body {
   color: var(--vintage-paper);
   text-decoration: none;
   font:
-    900 24px/1 Impact,
+    900 19px/1 Impact,
     Haettenschweiler,
     "Arial Narrow",
     sans-serif;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   white-space: nowrap;
   flex-shrink: 0;

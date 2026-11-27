@@ -30,3 +30,4 @@ use the editor.
 <!-- LOVABLE:END -->
 
 - Keep the interactive garment rail in its own UI module and compose its translated archive content separately, so animation logic stays independent of store copy.
+- The home hero hides its built-in nav; the site header (announcement bar + navbar) is sticky on every page and the hero sizes to the space below it via --site-header-h. Why: navbars must always be visible.

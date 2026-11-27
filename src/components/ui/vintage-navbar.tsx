@@ -174,7 +174,7 @@ export default function VintageNavbar() {
       <div className="vn__bar">
         <div className="vn__inner">
           <Link to="/" className="vn__logo">
-            AVNYC
+            AUTHENTIC VINTAGE STORE
           </Link>
 
           <nav className="vn__nav" onMouseLeave={closeDropdown} aria-label="Main">
@@ -371,7 +371,7 @@ export default function VintageNavbar() {
         inert={!mobileOpen}
       >
         <div className="vn__mobile-header">
-          <span className="vn__logo">AVNYC</span>
+          <span className="vn__logo">AUTHENTIC VINTAGE STORE</span>
           <button
             className="vn__icon"
             onClick={closeMobile}
